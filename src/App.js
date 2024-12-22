@@ -1,10 +1,27 @@
 import './App.css';
 
+import Header from './components/Header';
+
+import Main from './components/Main';
+
+import Footer from './components/Footer';
+
+import Logo from './components/Logo';
+
+import Nav from './components/Nav';
+
 function App() {
   return (
-    <div className="App">
-      Homepage
-    </div>
+    <>
+      <Header>
+        <Logo />
+        <Nav />
+      </Header>
+
+      <Main />
+
+      <Footer />
+    </>
   );
 }
 
