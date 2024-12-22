@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -42,7 +43,7 @@ header {
   justify-content: center;
 }
 
-nav > ul {
+nav>ul {
   display: flex;
   gap: 1rem;
 }
@@ -57,7 +58,58 @@ nav a {
 }
 
 @media (max-width: 768px) {
-  nav > ul {
+  nav>ul {
     flex-direction: column;
   }
+}
+
+h1 {
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  font-size: 64px;
+}
+
+h2 {
+  font-family: 'Markazi Text';
+  font-size: 40px;
+}
+
+h3, nav li {
+  font-family: 'Karla';
+  font-weight: 800;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: 'Karla';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+h5 {
+  font-family: 'Karla';
+  font-weight: 800;
+  font-size: 16px;
+}
+
+h6 {
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 14px;
+}
+
+p {
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 18px;
+}
+
+span {
+  font-family: 'Karla';
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+main image {
+  border-radius: 16px;
 }
