@@ -41,11 +41,12 @@
 header {
   display: flex;
   justify-content: center;
+  padding: 1rem;
 }
 
 nav>ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 nav li {
@@ -67,11 +68,13 @@ h1 {
   font-family: 'Markazi Text';
   font-weight: 500;
   font-size: 64px;
+  margin-bottom: 0;
 }
 
 h2 {
   font-family: 'Markazi Text';
   font-size: 40px;
+  margin-top: 0;
 }
 
 h3, nav li {
@@ -98,7 +101,7 @@ h6 {
   font-size: 14px;
 }
 
-p {
+p, button {
   font-family: 'Karla';
   font-weight: 500;
   font-size: 18px;
@@ -110,6 +113,45 @@ span {
   line-height: 1.5;
 }
 
-main image {
+main img, button {
   border-radius: 16px;
+}
+
+:root {
+  --primary1: #495E57;
+  --primary2: #F4CE14;
+}
+
+.cta {
+  background-color: var(--primary1);
+}
+
+.cta h1 {
+  color: var(--primary2);
+}
+
+.cta h2, .cta p {
+  color: white
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.cta > div:first-child {
+  flex: .5;
+}
+
+.cta img {
+  position: relative;
+  bottom: -60px;
+}
+
+button {
+  background-color: var(--primary2);
+  color: black;
+  padding: 1rem;
 }

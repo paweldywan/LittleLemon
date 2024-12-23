@@ -1,8 +1,12 @@
-const Header = ({
-    children
-}) => {
+import Logo from './Logo';
+import Nav from './Nav';
+
+const Header = () => {
     return (
-        <header>{children}</header>
+        <header>
+            <Logo />
+            <Nav />
+        </header>
     );
 };
 
