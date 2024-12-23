@@ -11,7 +11,7 @@ const CallToAction = () => {
             </div>
 
             <div>
-                <img src={Image} alt="Restaurant food" width="300" height="300" />
+                <img src={Image} alt="Restaurant food" width="300" />
             </div>
         </div>
     );
