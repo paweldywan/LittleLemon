@@ -5,8 +5,6 @@ const BookingForm = ({
     availableTimesDispatch
 }) => {
     const handleChange = (e, callback) => {
-        e.preventDefault();
-
         setData({
             ...data,
             [e.target.id]: e.target.value
