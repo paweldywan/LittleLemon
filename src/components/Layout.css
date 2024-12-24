@@ -1,0 +1,75 @@
+:root {
+    --primary1: #495E57;
+    --primary2: #F4CE14;
+    --secondary1: #EE9972;
+    --secondary3: #EDEFEE;
+}
+
+/*Display Title*/
+h1 {
+    font-family: 'Markazi Text';
+    font-weight: 500;
+    font-size: 64px;
+}
+
+/*Sub title*/
+h2 {
+    font-family: 'Markazi Text';
+    font-size: 40px;
+}
+
+/*Section title*/
+h3,
+nav li {
+    font-family: 'Karla';
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/*Card title*/
+h4 {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/*Specials*/
+h5 {
+    font-family: 'Karla';
+    font-weight: 800;
+    font-size: 16px;
+}
+
+/*Highlight text*/
+h6 {
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*Lead text*/
+p,
+button {
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/*Paragraph text*/
+span {
+    font-family: 'Karla';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+main img,
+button {
+    border-radius: 16px;
+}
+
+button {
+    background-color: var(--primary2);
+    color: black;
+    padding: 1rem;
+    border: none;
+}

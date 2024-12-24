@@ -1,8 +1,7 @@
 const CustomersSay = () => {
     return (
-        <div>
-            <h2>What our customers say</h2>
-            <p>...</p>
+        <div className="customers-say">
+            <h2>Testimonials</h2>
         </div>
     );
 };

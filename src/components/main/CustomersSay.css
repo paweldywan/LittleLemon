@@ -1,0 +1,8 @@
+.customers-say {
+    background-color: var(--secondary3);
+    padding: 5rem;
+}
+
+.customers-say>h2 {
+    text-align: center;
+}

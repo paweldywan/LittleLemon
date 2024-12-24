@@ -1,4 +1,7 @@
-import Image from "../../assets/greek salad.jpg";
+import Image1 from "../../assets/greek salad.jpg";
+import Image2 from "../../assets/bruchetta.svg";
+import Image3 from "../../assets/lemon dessert.jpg";
+import Card from "../Card";
 
 const Specials = () => {
     return (
@@ -9,35 +12,24 @@ const Specials = () => {
             </section>
 
             <section>
-                <article className="card">
-                    <img src={Image} alt="Greek salad" width="100%" />
-                    <div>
-                        <h4>Greek salad</h4>
-                        <h6>$12.99</h6>
-                    </div>
-                    <h6>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</h6>
-                    <h5>Order a delivery</h5>
-                </article>
-
-                <article className="card">
-                    <img src={Image} alt="Greek salad" width="100%" />
-                    <div>
-                        <h4>Greek salad</h4>
-                        <h6>$12.99</h6>
-                    </div>
-                    <h6>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</h6>
-                    <h5>Order a delivery</h5>
-                </article>
-
-                <article className="card">
-                    <img src={Image} alt="Greek salad" width="100%" />
-                    <div>
-                        <h4>Greek salad</h4>
-                        <h6>$12.99</h6>
-                    </div>
-                    <h6>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</h6>
-                    <h5>Order a delivery</h5>
-                </article>
+                <Card
+                    image={Image1}
+                    name="Greek salad"
+                    price="€12.99"
+                    description="The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
+                />
+                <Card
+                    image={Image2}
+                    name="Bruchetta"
+                    price="€5.99"
+                    description="Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. "
+                />
+                <Card
+                    image={Image3}
+                    name="Lemon Dessert"
+                    price="€5.00"
+                    description="This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
+                />
             </section>
         </div>
     );
