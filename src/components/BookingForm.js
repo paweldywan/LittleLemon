@@ -1,33 +1,24 @@
-import { useState } from 'react';
-
-const availableTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-];
-
-const BookingForm = () => {
-    const [data, setData] = useState({
-        date: '',
-        time: '',
-        guests: '',
-        occasion: ''
-    });
-
-    const handleChange = e => {
+const BookingForm = ({
+    data,
+    setData,
+    availableTimes,
+    availableTimesDispatch
+}) => {
+    const handleChange = (e, callback) => {
         setData({
             ...data,
             [e.target.id]: e.target.value
         });
+
+        if (callback) {
+            callback(e.target.value);
+        }
     }
 
     return (
         <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" onChange={handleChange} />
+            <input type="date" id="res-date" onChange={e => handleChange(e, availableTimesDispatch)} />
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time ">
                 {availableTimes.map(time => (
