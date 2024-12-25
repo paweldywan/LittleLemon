@@ -4,26 +4,14 @@ import BookingPage from "../pages/BookingPage";
 import DesksPage from "../pages/DesksPage";
 import { useState, useReducer } from 'react';
 
-export const updateTimes = date => {
-    return [
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ];
+export const updateTimes = (_state, date) => {
+    // eslint-disable-next-line no-undef
+    return fetchAPI(new Date(date));
 };
 
 export const initializeTimes = () => {
-    return [
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ];
+    // eslint-disable-next-line no-undef
+    return fetchAPI(new Date());
 };
 
 const Main = () => {
@@ -34,7 +22,7 @@ const Main = () => {
         occasion: ''
     });
 
-    const [availableTimes, availableTimesDispatch] = useReducer(updateTimes, initializeTimes);
+    const [availableTimes, availableTimesDispatch] = useReducer(updateTimes, initializeTimes());
 
     return (
         <main>
