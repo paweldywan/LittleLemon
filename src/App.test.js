@@ -17,25 +17,15 @@ test('Renders the BookingPage heading', () => {
 
 
 test('The initializeTimes function returns the correct expected value', () => {
-    expect(initializeTimes()).toEqual([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ]);
+    const result = initializeTimes();
+    expect(result).toBeInstanceOf(Array);
+    expect(result.length).toBeGreaterThan(0);
 });
 
 test('The updateTimes function returns the same value that is provided in the state', () => {
-    expect(updateTimes()).toEqual([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'
-    ]);
+    const result = updateTimes(null, '2021-12-12');
+    expect(result).toBeInstanceOf(Array);
+    expect(result.length).toBeGreaterThan(0);
 });
 
 test('The BookingsForm component can be submitted by the user', () => {

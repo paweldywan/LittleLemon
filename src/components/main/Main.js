@@ -4,14 +4,13 @@ import BookingPage from "../pages/BookingPage";
 import DesksPage from "../pages/DesksPage";
 import { useState, useReducer } from 'react';
 import ConfirmedBooking from "../pages/ConfirmedBooking";
+import { fetchAPI, submitAPI } from "../../api";
 
 export const updateTimes = (_state, date) => {
-    // eslint-disable-next-line no-undef
     return fetchAPI(new Date(date));
 };
 
 export const initializeTimes = () => {
-    // eslint-disable-next-line no-undef
     return fetchAPI(new Date());
 };
 
@@ -28,7 +27,6 @@ const Main = () => {
     const navigate = useNavigate();
 
     const submitForm = formData => {
-        // eslint-disable-next-line no-undef
         const result = submitAPI(formData);
 
         if (result) {
