@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, useNavigate } from "react-router";
 import HomePage from "../pages/HomePage";
 import BookingPage from "../pages/BookingPage";
 import DesksPage from "../pages/DesksPage";
 import { useState, useReducer } from 'react';
+import ConfirmedBooking from "../pages/ConfirmedBooking";
 
 export const updateTimes = (_state, date) => {
     // eslint-disable-next-line no-undef
@@ -24,6 +25,17 @@ const Main = () => {
 
     const [availableTimes, availableTimesDispatch] = useReducer(updateTimes, initializeTimes());
 
+    const navigate = useNavigate();
+
+    const submitForm = formData => {
+        // eslint-disable-next-line no-undef
+        const result = submitAPI(formData);
+
+        if (result) {
+            navigate('/confirmed-booking');
+        }
+    };
+
     return (
         <main>
             <Routes>
@@ -34,9 +46,11 @@ const Main = () => {
                         setData={setBooking}
                         availableTimes={availableTimes}
                         availableTimesDispatch={availableTimesDispatch}
+                        submitForm={submitForm}
                     />
                 }></Route>
                 <Route path="/desks" element={<DesksPage />}></Route>
+                <Route path="/confirmed-booking" element={<ConfirmedBooking />}></Route>
             </Routes>
         </main>
     );

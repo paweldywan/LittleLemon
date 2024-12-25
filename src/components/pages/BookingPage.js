@@ -4,7 +4,8 @@ const BookingPage = ({
     data,
     setData,
     availableTimes,
-    availableTimesDispatch
+    availableTimesDispatch,
+    submitForm
 }) => {
     return (
         <div>
@@ -14,6 +15,7 @@ const BookingPage = ({
                 setData={setData}
                 availableTimes={availableTimes}
                 availableTimesDispatch={availableTimesDispatch}
+                submitForm={submitForm}
             />
         </div>
     );

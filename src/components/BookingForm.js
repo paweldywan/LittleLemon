@@ -2,7 +2,8 @@ const BookingForm = ({
     data,
     setData,
     availableTimes,
-    availableTimesDispatch
+    availableTimesDispatch,
+    submitForm
 }) => {
     const handleChange = (e, callback) => {
         setData({
@@ -18,7 +19,14 @@ const BookingForm = ({
     return (
         <>
             <h1>Book Now</h1>
-            <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
+            <form
+                style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
+                onSubmit={e => {
+                    e.preventDefault();
+
+                    submitForm(data);
+                }}
+            >
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" onChange={e => handleChange(e, availableTimesDispatch)} />
                 <label htmlFor="res-time">Choose time</label>
@@ -34,7 +42,7 @@ const BookingForm = ({
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
-                <input type="submit" value="Make Your reservation" onChange={handleChange} />
+                <input type="submit" value="Make Your reservation" />
             </form>
         </>
     );
