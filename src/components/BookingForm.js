@@ -14,7 +14,7 @@ const BookingForm = ({
         if (callback) {
             callback(e.target.value);
         }
-    }
+    };
 
     return (
         <>
@@ -28,7 +28,7 @@ const BookingForm = ({
                 }}
             >
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" onChange={e => handleChange(e, availableTimesDispatch)} />
+                <input type="date" id="res-date" required onChange={e => handleChange(e, availableTimesDispatch)} />
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time ">
                     {availableTimes?.map(time => (
@@ -38,7 +38,8 @@ const BookingForm = ({
                 <label htmlFor="guests">Number of guests</label>
                 <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={handleChange} />
                 <label htmlFor="occasion">Occasion</label>
-                <select id="occasion">
+                <select id="occasion" required onChange={handleChange}>
+                    <option value="">Select an occasion</option>
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
