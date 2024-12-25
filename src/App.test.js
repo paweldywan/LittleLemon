@@ -33,3 +33,28 @@ test('The BookingsForm component can be submitted by the user', () => {
     const submitButton = screen.getByRole('button', { name: /Make Your reservation/i });
     expect(submitButton).toBeInTheDocument();
 });
+
+test('The BookingForm component has the correct attributes for the date input field', () => {
+    render(<BookingForm />);
+    const input = screen.getByLabelText('Choose date');
+    expect(input).toBeRequired();
+});
+
+test('The BookingForm component has the correct attributes for the time input field', () => {
+    render(<BookingForm />);
+    const input = screen.getByLabelText('Choose time');
+    expect(input).toBeRequired();
+});
+
+test('The BookingForm component has the correct attributes for the number of guests input field', () => {
+    render(<BookingForm />);
+    const input = screen.getByLabelText('Number of guests');
+    expect(input).toHaveAttribute('min', '1');
+    expect(input).toHaveAttribute('max', '10');
+});
+
+test('The BookingForm component has the correct attributes for the occasion input field', () => {
+    render(<BookingForm />);
+    const input = screen.getByLabelText('Occasion');
+    expect(input).toBeRequired();
+});

@@ -30,7 +30,7 @@ const BookingForm = ({
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" required onChange={e => handleChange(e, availableTimesDispatch)} />
                 <label htmlFor="res-time">Choose time</label>
-                <select id="res-time ">
+                <select required id="res-time">
                     {availableTimes?.map(time => (
                         <option key={time} value={time}>{time}</option>
                     ))}
